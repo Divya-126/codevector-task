@@ -38,12 +38,12 @@ const getProducts = async (req, res) => {
 
     const result = await pool.query(query, values);
     console.log("QUERY:");
-    console.log(query);
+
     console.log("cursorId:", cursorId);
     console.log("cursorTime:", cursorTime);
 
     console.log("VALUES:");
-    console.log(values);
+
     console.log("ROWS:", result.rows.length);
 
     const products = result.rows;
